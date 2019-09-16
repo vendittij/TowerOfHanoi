@@ -78,8 +78,6 @@ class Tower extends Component{
           height = {-260}
           stroke = {'white'}
           strokeWidth = {4}
-          onMouseOver = {()=>this.eventHandle('green')}
-          onMouseOut = {()=>this.eventHandle('grey')}
           />
           <Rect
           x={this.state.Loc2 - 50}
