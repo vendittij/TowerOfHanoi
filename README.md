@@ -1,6 +1,6 @@
 # TowerOfHanoi
 
-Download this folder.
+Download this folder.\n
 Unzip.
 Navigate to this directory using terminal.
 Move into the directory "tower".
