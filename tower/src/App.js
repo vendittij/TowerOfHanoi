@@ -14,6 +14,8 @@ function App() {
             1. You must move all rings from the right peg to the left peg in as few moves as possible </h6>
           <h6>
             2. You may only move one ring at a time from the top of any peg</h6>
+          <h6>
+            3. Perfect score is 15 </h6>
         </div>
         <BackDrop/>
       </header>

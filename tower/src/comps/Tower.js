@@ -11,7 +11,7 @@ class Tower extends Component{
 
     this.state = {
       color: 'gray',
-      height: window.innerHeight*(3/5),
+      height: window.innerHeight*(2/5),
       Loc1: window.innerWidth*(1/6),
       Loc2: window.innerWidth*(1/6)+375,
       Loc3: window.innerWidth*(1/6)+750,
@@ -95,7 +95,7 @@ class Tower extends Component{
           stroke = {'white'}
           strokeWidth = {4}
           />
-          <Ring loc={this.state.Loc1} height={this.state.height} n={this.props.n}/>
+          <Ring loc={this.state.Loc1} height={this.state.height} n={this.props.n} moves={this.props.moves} updateMoves={this.props.updateMoves}/>
         </Layer>
       </Stage>
     );

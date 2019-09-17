@@ -12,9 +12,11 @@ class BackDrop extends Component{
   constructor (props){
     super(props);
     this.state={
-      nRings: 4
+      nRings: 4,
+      moves: 0
     };
     this.updateNumRings =this.updateNumRings.bind(this);
+    this.updateMoves =this.updateMoves.bind(this);
   }
 
   updateNumRings(n){
@@ -23,11 +25,19 @@ class BackDrop extends Component{
     });
   }
 
+  updateMoves(){
+    var n = this.state.moves+1
+    this.setState({
+      moves:n
+    });
+  }
+
   render(){
     return(
       <div>
-        
-        <Tower n={this.state.nRings}/>
+        <h3>Current number of moves:</h3>
+        <h4>{this.state.moves}</h4>
+        <Tower n={this.state.nRings} moves={this.state.moves} updateMoves={this.updateMoves}/>
 
       </div>
     );

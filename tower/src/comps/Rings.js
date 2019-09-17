@@ -118,6 +118,7 @@ class Ring extends Component{
             y:this.props.height - (20*(this.state.ringsLocs1.length+1))
           });
           this.state.ringsLocs1.push(key);
+          this.props.updateMoves();
           // These Two loops remove the ring from other tower locations
           for( var i = 0; i < this.state.ringsLocs2.length; i++){
             if ( this.state.ringsLocs2[i] === key) {
@@ -130,6 +131,7 @@ class Ring extends Component{
             }
           }
         }
+        // If it cant move go back
         else{
           e.target.to({
           x:this.state.x,
@@ -145,6 +147,7 @@ class Ring extends Component{
             y:this.props.height - (20*(this.state.ringsLocs2.length+1))
           });
           this.state.ringsLocs2.push(key);
+          this.props.updateMoves();
           // These Two loops remove the ring from other tower locations
           for( var i = 0; i < this.state.ringsLocs1.length; i++){
             if ( this.state.ringsLocs1[i] === key) {
@@ -171,6 +174,7 @@ class Ring extends Component{
             y:this.props.height - (20*(this.state.ringsLocs3.length+1))
           });
           this.state.ringsLocs3.push(key);
+          this.props.updateMoves();
           // These Two loops remove the ring from other tower locations
           for( var i = 0; i < this.state.ringsLocs2.length; i++){
             if ( this.state.ringsLocs2[i] === key) {
