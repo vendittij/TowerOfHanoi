@@ -13,7 +13,8 @@ class BackDrop extends Component{
     super(props);
     this.state={
       nRings: 4,
-      moves: 0
+      moves: 0,
+      hidden: true
     };
     this.updateNumRings =this.updateNumRings.bind(this);
     this.updateMoves =this.updateMoves.bind(this);

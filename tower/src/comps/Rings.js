@@ -37,19 +37,11 @@ class Ring extends Component{
   }
 
   gameWon (){
-    console.log(this.state.ringsLocs3.length == this.props.n);
     if(this.state.ringsLocs3.length == this.props.n){
       return true;
     }return false;
   }
 
-  checkGameWon = e =>{
-    if(this.gameWon()){
-      e.target.to({
-        draggable:false
-      });
-    }
-  }
 
   setOrigLoc= e =>{
     var key = Number(e.target.attrs.id);
@@ -206,7 +198,28 @@ class Ring extends Component{
 
   render(){
     const numRings = this.setRings();
-    return(
+    if(this.gameWon()){
+      return(
+        numRings.map((ring)=>{
+          return(
+            <Rect
+            key={ring.toString()}
+            id={ring.toString()}
+            x={this.props.loc+(12.5*ring)}
+            y={this.props.height-(20*ring)}
+            width={this.state.wide -(12.5*(ring-1)*2)}
+            height={20}
+            fill={this.state.color[ring-1]}
+            draggable={false}
+            onDragStart= {this.setOrigLoc}
+            onMouseButtonUp = {this.handleDragEnd}
+            />
+          )
+        })
+
+      );
+    }else{
+      return(
       numRings.map((ring)=>{
         return(
           <Rect
@@ -218,13 +231,13 @@ class Ring extends Component{
           height={20}
           fill={this.state.color[ring-1]}
           draggable={true}
-          onClick = {this.checkGameWon}
           onDragStart= {this.setOrigLoc}
           onDragEnd = {this.handleDragEnd}
           />
         )
       })
 
-    );
+    );}
+
   }
 }export default Ring;
