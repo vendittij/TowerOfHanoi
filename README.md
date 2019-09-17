@@ -1,8 +1,8 @@
 # TowerOfHanoi
 
 Download this folder.\n
-Unzip.
-Navigate to this directory using terminal.
-Move into the directory "tower".
-Run the command "npm start".
-The application will open in your browser using localhost.
+Unzip.\n
+Navigate to this directory using terminal.\n
+Move into the directory "tower".\n
+Run the command "npm start".\n
+The application will open in your browser using localhost.\n
