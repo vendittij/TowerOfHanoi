@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
-import { Stage, Layer, Rect, Text } from 'react-konva';
-import Konva from 'konva';
+import { Rect } from 'react-konva';
 
 
 
@@ -37,7 +35,7 @@ class Ring extends Component{
   }
 
   gameWon (){
-    if(this.state.ringsLocs3.length == this.props.n){
+    if(this.state.ringsLocs3.length === this.props.n){
       return true;
     }return false;
   }
@@ -85,7 +83,7 @@ class Ring extends Component{
   }
 
   biggerOnBottom(key, location){
-    if (location.length == 0){
+    if (location.length === 0){
       return true;
     }else if(key > location[location.length-1]){
       return true;
@@ -93,7 +91,7 @@ class Ring extends Component{
   }
 
   onTop(key,location){
-    if(key == location[location.length-1]){
+    if(key === location[location.length-1]){
       return true;
     }return false;
   }
@@ -191,9 +189,6 @@ class Ring extends Component{
       y:this.state.y
     });
     }
-    console.log(this.state.ringsLocs1);
-    console.log(this.state.ringsLocs2);
-    console.log(this.state.ringsLocs3);
   }
 
   render(){
