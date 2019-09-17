@@ -11,7 +11,7 @@ class Tower extends Component{
 
     this.state = {
       color: 'gray',
-      height: window.innerHeight*(2/3),
+      height: window.innerHeight*(3/5),
       Loc1: window.innerWidth*(1/6),
       Loc2: window.innerWidth*(1/6)+375,
       Loc3: window.innerWidth*(1/6)+750,

@@ -8,6 +8,13 @@ function App() {
     <div className="App">
       <header className="App-header">
         Tower of Hanoi
+        <div>
+          <h4>Rules</h4>
+          <h6>
+            1. You must move all rings from the right peg to the left peg in as few moves as possible </h6>
+          <h6>
+            2. You may only move one ring at a time from the top of any peg</h6>
+        </div>
         <BackDrop/>
       </header>
     </div>

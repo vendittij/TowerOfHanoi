@@ -4,8 +4,7 @@ import { Stage, Layer, Rect, Text } from 'react-konva';
 import Konva from 'konva';
 import Ring from './Rings.js'
 import Tower from './Tower.js'
-
-
+import '../App.css';
 
 {/* BackDrop */}
 
@@ -27,11 +26,7 @@ class BackDrop extends Component{
   render(){
     return(
       <div>
-        <button onClick={()=>this.updateNumRings(3)}>3</button>
-        <button onClick={()=>this.updateNumRings(4)}>4</button>
-        <button onClick={()=>this.updateNumRings(5)}>5</button>
-        <button onClick={()=>this.updateNumRings(6)}>6</button>
-
+        
         <Tower n={this.state.nRings}/>
 
       </div>
